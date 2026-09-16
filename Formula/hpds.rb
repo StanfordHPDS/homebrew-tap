@@ -1,25 +1,25 @@
 class Hpds < Formula
   desc "Unified tooling for the Stanford HPDS lab: project templates, machine setup, and repo audits"
   homepage "https://github.com/StanfordHPDS/hpds-cli"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.1/hpds-aarch64-apple-darwin.tar.gz"
-      sha256 "0627233cd14f43415001a63519a9ff5299022856a498a6bc8bc0eb5c8688d858"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-aarch64-apple-darwin.tar.gz"
+      sha256 "d170e40a1c16bd07aaf1655992587507536e477d348f6de20fa1ac80e36d339e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.1/hpds-x86_64-apple-darwin.tar.gz"
-      sha256 "3ab50ede241d802731699b53fd88dc2685e4753d6a82804fdd8e004aebd3cf02"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-x86_64-apple-darwin.tar.gz"
+      sha256 "b1f91b8aa5a245c8a3dec03533698d224547f11e85ec94ce5e1197cfc56d6432"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.1/hpds-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "79554d852813d1a61b5675d4f14fdd52ee4f0c15f9c55849706fdc2948aee98b"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "6ace291bec5dbeb3f01b9ba2e63a85a7b72552fd201be2b7fce8b15bd6448a02"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.1/hpds-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "d862bb42726977d7a2c583bd3c2e5deb49fbab3e2f701701a3dbe12aed2f9d40"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ee399d1fb5bc4594a089819edef9cd847bef2174e76cb9944a5be8c6c2b38d78"
     end
   end
   license "MIT"
@@ -52,10 +52,18 @@ class Hpds < Formula
   end
 
   def install
-    bin.install "hpds" if OS.mac? && Hardware::CPU.arm?
-    bin.install "hpds" if OS.mac? && Hardware::CPU.intel?
-    bin.install "hpds" if OS.linux? && Hardware::CPU.arm?
-    bin.install "hpds" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "hpds"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "hpds"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "hpds"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "hpds"
+    end
 
     install_binary_aliases!
 
