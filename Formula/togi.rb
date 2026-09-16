@@ -1,25 +1,25 @@
 class Togi < Formula
   desc "Polyglot formatter and linter for data science projects: R, Python, Quarto/Markdown, and SQL behind one stable interface"
   homepage "https://github.com/StanfordHPDS/togi"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.0/togi-aarch64-apple-darwin.tar.gz"
-      sha256 "09d6c210d52bcf96308fd6ed22d8b72eddbef62b45ff13c1a82a9360e693ab39"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-aarch64-apple-darwin.tar.gz"
+      sha256 "95f9d27167a3a61160a05449e9f416d663d4fd5e42a67eb9158d1ae563aa400b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.0/togi-x86_64-apple-darwin.tar.gz"
-      sha256 "6afbab9f319ffe3042943c7540361d400904ddd25332a08089d93721260f05f4"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-x86_64-apple-darwin.tar.gz"
+      sha256 "78e57b4ca68137640af5c3bcf49c9eb2bfb5e6959375636fb5d354080bfb7690"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.0/togi-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "8af963eaf98a3e5e7a0d957a4b4fdbba341bf27ef24e2fa0dd5b91cb87a8c487"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "53783b2b9afd42551e8efb23395a300f8e2ab197d1e13b6d0b43bda84478a393"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.0/togi-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "48c566e7f2393409133df701b00f4de6a73e977d489fb18ef470cfaf87ca40cd"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "e10904ccba67a76083024037cb3110af3b88e739d6e6b46d5bc06c2136c855e5"
     end
   end
   license "MIT"
@@ -52,10 +52,18 @@ class Togi < Formula
   end
 
   def install
-    bin.install "togi" if OS.mac? && Hardware::CPU.arm?
-    bin.install "togi" if OS.mac? && Hardware::CPU.intel?
-    bin.install "togi" if OS.linux? && Hardware::CPU.arm?
-    bin.install "togi" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "togi"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "togi"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "togi"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "togi"
+    end
 
     install_binary_aliases!
 
