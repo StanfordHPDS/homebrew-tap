@@ -1,25 +1,25 @@
 class Hpds < Formula
   desc "Unified tooling for the Stanford HPDS lab: project templates, machine setup, and repo audits"
   homepage "https://github.com/StanfordHPDS/hpds-cli"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-aarch64-apple-darwin.tar.gz"
-      sha256 "d170e40a1c16bd07aaf1655992587507536e477d348f6de20fa1ac80e36d339e"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.3/hpds-aarch64-apple-darwin.tar.gz"
+      sha256 "1d0036d0506814faeeab85e05bd9e5d879830a639c4972de01d8885973d2a577"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-x86_64-apple-darwin.tar.gz"
-      sha256 "b1f91b8aa5a245c8a3dec03533698d224547f11e85ec94ce5e1197cfc56d6432"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.3/hpds-x86_64-apple-darwin.tar.gz"
+      sha256 "cdf51fad930fccbcb8fa4906bc4beac651cb1a84a8f0a813bb4a02e578289f56"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "6ace291bec5dbeb3f01b9ba2e63a85a7b72552fd201be2b7fce8b15bd6448a02"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.3/hpds-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "b8cece93ca14dfddbd5a69331255622ddfed578b3c8b7e327cf9e1cd5b50a95c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.2/hpds-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ee399d1fb5bc4594a089819edef9cd847bef2174e76cb9944a5be8c6c2b38d78"
+      url "https://github.com/StanfordHPDS/hpds-cli/releases/download/v0.1.3/hpds-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c16d55e664d8396a925bca4ffb7bd093caab732bc8c1aa8bd759ea1e3e6d385d"
     end
   end
   license "MIT"
