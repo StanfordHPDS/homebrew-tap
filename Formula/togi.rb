@@ -1,25 +1,25 @@
 class Togi < Formula
   desc "Polyglot formatter and linter for data science projects: R, Python, Quarto/Markdown, and SQL behind one stable interface"
   homepage "https://github.com/StanfordHPDS/togi"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-aarch64-apple-darwin.tar.gz"
-      sha256 "95f9d27167a3a61160a05449e9f416d663d4fd5e42a67eb9158d1ae563aa400b"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.2/togi-aarch64-apple-darwin.tar.gz"
+      sha256 "84a1d664fde53a9329417d97f91d05181d4868722c17442c306eaeb0a483d0f5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-x86_64-apple-darwin.tar.gz"
-      sha256 "78e57b4ca68137640af5c3bcf49c9eb2bfb5e6959375636fb5d354080bfb7690"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.2/togi-x86_64-apple-darwin.tar.gz"
+      sha256 "78d51f1caa82062edfd3e9289a1cee93a31ed6f7c15539ba85a0e80694941812"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "53783b2b9afd42551e8efb23395a300f8e2ab197d1e13b6d0b43bda84478a393"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.2/togi-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bc6eaa6b3ab5854f355b7080aff73e2a11ff99cd059d6342f81d06b519369970"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.1/togi-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e10904ccba67a76083024037cb3110af3b88e739d6e6b46d5bc06c2136c855e5"
+      url "https://github.com/StanfordHPDS/togi/releases/download/v0.1.2/togi-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7de581df51a2003c430f633e6b30a1c2d3c513e5b683fd884b812d9980ba2e52"
     end
   end
   license "MIT"
